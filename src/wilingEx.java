@@ -2,12 +2,12 @@ import java.util.Arrays;
 
 public class wilingEx {
 
-    public static void checker(char rz1, char rzad0, char[] znakiDop){
+    public static void checker(char rz1, char rz0, char[] znakiDop){
         boolean flag = false;
         for (char c : znakiDop) {
             if (c == rz1) {
                 for (char d : znakiDop){
-                    if (d == rzad0){
+                    if (d == rz0){
                         flag = true;
                     }
                 }
