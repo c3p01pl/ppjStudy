@@ -35,7 +35,7 @@ public class wilingEx {
         rzad1 = in.next().charAt(0);
         System.out.print("Podaj rzad0: ");
         rzad0 = in.next().charAt(0);
-        String liczbaString = new StringBuilder().append(rzad1).append(rzad0).toString();
+        String liczbaString = String.valueOf(rzad1) + rzad0;
 
         switch (typ) {
             case 'b':
