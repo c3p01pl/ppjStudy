@@ -54,7 +54,7 @@ public class wilingEx {
                 wynik = Integer.parseInt(liczbaString);
                 System.out.println("Twoja liczba w systemie binarnym to: " + Integer.toBinaryString(wynik));
                 System.out.println("Twoja liczba w systemie dziesiętnym to: " + wynik);
-                System.out.println("Twoja liczba w systemie szesnastkowym to: " + Integer.toHexString(wynik));
+                System.out.println("Twoja liczba w systemie szesnastkowym to: " + Integer.toHexString(wynik).toUpperCase());
                 break;
             case 'h':
                 System.out.println("Wybrano System szesnastkowy.");
@@ -62,7 +62,7 @@ public class wilingEx {
                 wynik = Integer.parseInt(liczbaString,16);
                 System.out.println("Twoja liczba w systemie binarnym to: " + Integer.toBinaryString(wynik));
                 System.out.println("Twoja liczba w systemie dziesiętnym to: " + wynik);
-                System.out.println("Twoja liczba w systemie szesnastkowym to: " + liczbaString.toUpperCase());
+                System.out.println("Twoja liczba w systemie szesnastkowym to: " + liczbaString);
                 break;
             default:
                 System.out.println("ERROR");
