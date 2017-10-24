@@ -39,6 +39,7 @@ public class wilingEx {
 
         switch (typ) {
             case 'b':
+                System.out.println("Wybrano System Binarny.");
                 znaki = Arrays.copyOfRange(znaki, 0, 2);
                 checker(rzad1,rzad0,znaki);
                 wynik = Integer.parseInt(liczbaString,2);
@@ -47,7 +48,7 @@ public class wilingEx {
                 System.out.println("Twoja liczba w systemie szesnastkowym to: " + wynik);
                 break;
             case 'd':
-                System.out.println("System Dziesiętny");
+                System.out.println("Wybrano System Dziesiętny.");
                 znaki = Arrays.copyOfRange(znaki, 0, 11);
                 checker(rzad1,rzad0,znaki);
                 wynik = Integer.parseInt(liczbaString);
@@ -56,7 +57,7 @@ public class wilingEx {
                 System.out.println("Twoja liczba w systemie szesnastkowym to: " + Integer.toHexString(wynik));
                 break;
             case 'h':
-                System.out.println("System szesnastkowy");
+                System.out.println("Wybrano System szesnastkowy.");
                 checker(rzad1,rzad0,znaki);
                 wynik = Integer.parseInt(liczbaString,16);
                 System.out.println("Twoja liczba w systemie binarnym to: " + Integer.toBinaryString(wynik));
