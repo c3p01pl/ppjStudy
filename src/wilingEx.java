@@ -25,19 +25,17 @@ public class wilingEx {
 
     public static void main(String[] args){
 
-        char typ, rzad1, rzad0;
         char[] znaki = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F','a','b','c','d','e','f'};
-        int wynik;
 
 
         java.util.Scanner in = new java.util.Scanner(System.in);
         System.out.print("Podaj typ liczby (b - binarny, d - dziesietny, h - szesnastkowy): ");
-        typ = in.next().charAt(0);
+        char typ = in.next().charAt(0);
 
         System.out.print("Podaj rzad1: ");
-        rzad1 = in.next().charAt(0);
+        char rzad1 = in.next().charAt(0);
         System.out.print("Podaj rzad0: ");
-        rzad0 = in.next().charAt(0);
+        char rzad0 = in.next().charAt(0);
         String liczbaString = String.valueOf(rzad1) + rzad0;
 
         switch (typ) {
@@ -45,7 +43,7 @@ public class wilingEx {
                 System.out.println("Wybrano System Binarny.");
                 znaki = Arrays.copyOfRange(znaki, 0, 2);
                 checker(rzad1,rzad0,znaki);
-                wynik = Integer.parseInt(liczbaString,2);
+                int wynik = Integer.parseInt(liczbaString,2);
                 System.out.println("Twoja liczba w systemie binarnym to: " + liczbaString);
                 System.out.println("Twoja liczba w systemie dziesiętnym to: " + wynik);
                 System.out.println("Twoja liczba w systemie szesnastkowym to: " + wynik);
