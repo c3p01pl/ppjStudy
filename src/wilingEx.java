@@ -1,23 +1,17 @@
 import java.util.Arrays;
 
+
 public class wilingEx {
-        /*
-         * Checking if chars are proper according to chosen numeral system.
-         */
-    public static void checker(char rz1, char rz0, char[] znakiDop){
+    /*
+     * Checking if chars are proper according to chosen numeral system.
+     */
+    public static void checker(String rz1, String rz0, String[] znakiDop){
 
-        boolean flag = false;
-        for (char c : znakiDop) {
-            if (c == rz1) {
-                for (char d : znakiDop){
-                    if (d == rz0){
-                        flag = true;
-                    }
-                }
-            }
-        }
 
-        if (!flag){
+        boolean flag1 = Arrays.asList(znakiDop).contains(rz1);
+        boolean flag0 = Arrays.asList(znakiDop).contains(rz0);
+
+        if (!(flag1 & flag0)){
             System.out.println("Wprowadzono złe dane.");
             System.exit(1);
         }
@@ -25,7 +19,7 @@ public class wilingEx {
 
     public static void main(String[] args){
 
-        char[] znaki = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F','a','b','c','d','e','f'};
+        String[] znaki = {"0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F","a","b","c","d","e","f"};
 
 
         java.util.Scanner in = new java.util.Scanner(System.in);
@@ -36,13 +30,15 @@ public class wilingEx {
         char rzad1 = in.next().charAt(0);
         System.out.print("Podaj rzad0: ");
         char rzad0 = in.next().charAt(0);
-        String liczbaString = String.valueOf(rzad1) + rzad0;
+        String LiczbaRzad1 = Character.toString(rzad1);
+        String LiczbaRzad0 = Character.toString(rzad0);
+        String liczbaString = LiczbaRzad1 + LiczbaRzad0;
 
         switch (typ) {
             case 'b':
                 System.out.println("Wybrano System Binarny.");
                 znaki = Arrays.copyOfRange(znaki, 0, 2);
-                checker(rzad1,rzad0,znaki);
+                checker(LiczbaRzad1,LiczbaRzad0,znaki);
                 int wynik = Integer.parseInt(liczbaString,2);
                 System.out.println("Twoja liczba w systemie binarnym to: " + liczbaString);
                 System.out.println("Twoja liczba w systemie dziesiętnym to: " + wynik);
@@ -51,7 +47,7 @@ public class wilingEx {
             case 'd':
                 System.out.println("Wybrano System Dziesiętny.");
                 znaki = Arrays.copyOfRange(znaki, 0, 11);
-                checker(rzad1,rzad0,znaki);
+                checker(LiczbaRzad1,LiczbaRzad0,znaki);
                 wynik = Integer.parseInt(liczbaString);
                 System.out.println("Twoja liczba w systemie binarnym to: " + Integer.toBinaryString(wynik));
                 System.out.println("Twoja liczba w systemie dziesiętnym to: " + wynik);
@@ -59,7 +55,7 @@ public class wilingEx {
                 break;
             case 'h':
                 System.out.println("Wybrano System szesnastkowy.");
-                checker(rzad1,rzad0,znaki);
+                checker(LiczbaRzad1,LiczbaRzad0,znaki);
                 wynik = Integer.parseInt(liczbaString,16);
                 System.out.println("Twoja liczba w systemie binarnym to: " + Integer.toBinaryString(wynik));
                 System.out.println("Twoja liczba w systemie dziesiętnym to: " + wynik);
