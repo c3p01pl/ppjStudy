@@ -1,10 +1,8 @@
 import java.util.Arrays;
 
 public class wilingEx {
-        /**
+        /*
          * Checking if chars are proper according to chosen numeral system.
-         *
-         *
          */
     public static void checker(char rz1, char rz0, char[] znakiDop){
 
