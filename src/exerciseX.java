@@ -60,7 +60,7 @@ public class exerciseX{
                 break;
             default:
                 System.out.println("ERROR");
-                System.exit(1);
+                break;
 
 
         }
