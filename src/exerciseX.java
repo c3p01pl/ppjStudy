@@ -8,18 +8,14 @@ public class exerciseX{
         System.out.print("Podaj typ liczby (b - binarny, d - dziesietny, h - szesnastkowy): ");
         char typ = in.next().charAt(0);
 
-        System.out.print("Podaj rzad1: ");
-        char rzad1 = in.next().charAt(0);
-        rzad1 = Character.toUpperCase(rzad1);
-
-        System.out.print("Podaj rzad0: ");
-        char rzad0 = in.next().charAt(0);
-        rzad0 = Character.toUpperCase(rzad0);
 
 
         switch (typ) {
             case 'b':
                 System.out.println("Wybrano System Binarny.");
+                char rzad1 = inputCharToProram("rzad1");
+                char rzad0 = inputCharToProram("rzad0");
+
                 if (checkIfCharsBelongToNumericalSystem(rzad1,rzad0,'1')){
 
                     int wynikDz = convertToDecimal(rzad1,rzad0,2);
@@ -31,6 +27,9 @@ public class exerciseX{
                 break;
             case 'd':
                 System.out.println("Wybrano System Dziesiętny.");
+                rzad1 = inputCharToProram("rzad1");
+                rzad0 = inputCharToProram("rzad0");
+
                 if (checkIfCharsBelongToNumericalSystem(rzad1,rzad0,'9')){
 
                     String liczbaString = Character.toString(rzad1) + Character.toString(rzad0);
@@ -46,6 +45,9 @@ public class exerciseX{
                 break;
             case 'h':
                 System.out.println("Wybrano System szesnastkowy.");
+                rzad1 = inputCharToProram("rzad1");
+                rzad0 = inputCharToProram("rzad0");
+
                 if (checkIfCharsBelongToNumericalSystem(rzad1,rzad0,'F')){
 
                     int wynikDz = convertToDecimal(rzad1,rzad0,16);
@@ -106,5 +108,17 @@ public class exerciseX{
             wartDec=wartDec/system;
         }
         return wartHex;
+    }
+
+    public static char inputCharToProram(String s){
+
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Podaj " + s + " :");
+        char rzad = in.next().charAt(0);
+        rzad = Character.toUpperCase(rzad);
+
+        return rzad;
+
     }
 }
