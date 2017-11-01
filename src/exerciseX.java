@@ -99,15 +99,15 @@ public class exerciseX{
     }
 
     public static String convertDecimalToHexOrBin(int wartDec, int system){
-        String wartHex = "";
-        String[] HexStr = {"0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F"};
+        String wart = "";
+        String[] string = {"0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F"};
         while(wartDec>0)
         {
             int reszta=wartDec%system;
-            wartHex=HexStr[reszta]+ wartHex;
+            wart=string[reszta]+ wart;
             wartDec=wartDec/system;
         }
-        return wartHex;
+        return wart;
     }
 
     public static char inputCharToProram(String s){
