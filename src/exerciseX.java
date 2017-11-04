@@ -70,12 +70,14 @@ public class exerciseX{
     public static boolean checkIfCharsBelongToNumericalSystem(char rz1, char rz0, char lastChar){
 
             boolean ok = false;
-
-            if (!(rz1 > lastChar | rz0 > lastChar)) {
-                ok = true;
+            if (rz1 >= '0' & rz0 >= '0') {
+                if (!(rz1 > lastChar | rz0 > lastChar)) {
+                    ok = true;
+                } else {
+                    System.out.println("Wprowadzono złe dane.");
+                }
             }
-            else {System.out.println("Wprowadzono złe dane.");}
-
+            else{System.out.println("Wprowadzono złe dane.");}
             return ok;
     }
 
