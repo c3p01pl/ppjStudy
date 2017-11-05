@@ -126,6 +126,7 @@ public class programExSix {
             }
             System.out.println();
         }
+        System.out.println("kolumna \\");
         int g=0;
         for(int i=0;i<len1;i++){
             for(int j=0;j<len1;j++) {
@@ -136,11 +137,9 @@ public class programExSix {
                                 g=1;
                                 System.out.println("tab["+i+"]["+j+"]= " + tab4[i][j] + " tab["+a+"]["+b+"]= " + tab4[a][b]);
                                 break;
-//                                if (g==1){System.out.println("TAK"); break;}
                             }
                         }
                     }
-
                 }
             }
         }
@@ -149,6 +148,7 @@ public class programExSix {
         }
 
         System.out.println();
+        System.out.println("kolumna /");
         int v=0;
         for(int i=0;i<len1;i++){
             for(int j=4;j>=0;j--) {
@@ -162,7 +162,6 @@ public class programExSix {
                             }
                         }
                     }
-
                 }
             }
         }
