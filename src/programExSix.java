@@ -118,6 +118,7 @@ public class programExSix {
 
         //9
         int tab4[][] = new int[5][5];
+        int len1 = tab4.length;
         for (int i = 0; i < tab4.length; i++){
             for (int j = 0; j < tab4.length; j++){
                 tab4[i][j]=(int)(Math.random()*10);
@@ -125,6 +126,51 @@ public class programExSix {
             }
             System.out.println();
         }
+//        int g=0;
+//        for(int i=0;i<len1;i++){
+//            for(int j=0;j<len1;j++) {
+//                if(i==j){
+//                    for (int a = i+1; a<len1;a++){
+//                        for (int b = j+1; b<len1;b++){
+//                            if (a==b && tab4[i][j]==tab4[a][b]){
+//                                g=1;
+//                                System.out.println("tab["+i+"]["+j+"]= " + tab4[i][j] + " tab["+a+"]["+b+"]= " + tab4[a][b]);
+//                                break;
+////                                if (g==1){System.out.println("TAK"); break;}
+//                            }
+//                        }
+//                    }
+//
+//                }
+//            }
+//        }
+//        if(g==0){
+//            System.out.println("brak takich samych wartości");
+//        }
+
+        System.out.println();
+        int v=0;
+        for(int i=0;i<len1;i++){
+            for(int j=4;j>=0;j--) {
+                if(i+j==4 || (i==2 & j==2)){
+                    for (int a = i+1; a<len1;a++){
+                        for (int b = j-1; b>=0;b--){
+                            if (a+b==4 && tab4[i][j]==tab4[a][b]){
+                            System.out.println("tab["+i+"]["+j+"]= " + tab4[i][j] + " tab["+a+"]["+b+"]= " + tab4[a][b]);
+                            v++;
+                            break;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+        if(v==0){
+            System.out.println("brak takich samych wartości");
+        }
+
+
 
     }
 }
