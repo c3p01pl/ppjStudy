@@ -117,7 +117,7 @@ public class programExSix {
         System.out.println();
 
         //9
-        int tab4[][] = new int[5][5];
+        int tab4[][] = new int[7][7];
         int len1 = tab4.length;
         for (int i = 0; i < tab4.length; i++){
             for (int j = 0; j < tab4.length; j++){
@@ -134,7 +134,7 @@ public class programExSix {
                     for (int a = i+1; a<len1;a++){
                         for (int b = j+1; b<len1;b++){
                             if (a==b && tab4[i][j]==tab4[a][b]){
-                                g=1;
+                                g++;
                                 System.out.println("tab["+i+"]["+j+"]= " + tab4[i][j] + " tab["+a+"]["+b+"]= " + tab4[a][b]);
                                 break;
                             }
@@ -150,15 +150,16 @@ public class programExSix {
         System.out.println();
         System.out.println("kolumna /");
         int v=0;
+        int mid = len1/2;
         for(int i=0;i<len1;i++){
-            for(int j=4;j>=0;j--) {
-                if(i+j==4 || (i==2 & j==2)){
+            for(int j=len1-1;j>=0;j--) {
+                if(i+j==len1-1 || (i==mid & j==mid)){
                     for (int a = i+1; a<len1;a++){
                         for (int b = j-1; b>=0;b--){
-                            if (a+b==4 && tab4[i][j]==tab4[a][b]){
-                            System.out.println("tab["+i+"]["+j+"]= " + tab4[i][j] + " tab["+a+"]["+b+"]= " + tab4[a][b]);
-                            v++;
-                            break;
+                            if (a+b==len1-1 && tab4[i][j]==tab4[a][b]){
+                                System.out.println("tab["+i+"]["+j+"]= " + tab4[i][j] + " tab["+a+"]["+b+"]= " + tab4[a][b]);
+                                v++;
+                                break;
                             }
                         }
                     }
