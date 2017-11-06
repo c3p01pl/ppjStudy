@@ -1,55 +1,53 @@
 public class CheckDiagonals {
     public static void main(String[] args) {
         //9
-        int tab4[][] = new int[5][5];
-        int len1 = tab4.length;
-        for (int i = 0; i < tab4.length; i++) {
-            for (int j = 0; j < tab4.length; j++) {
-                tab4[i][j] = (int) (Math.random() * 10);
-                System.out.print(tab4[i][j] + " ");
+        int tab[][] = new int[7][7];
+        int tableLength = tab.length;
+
+        for (int i = 0; i < tab.length; i++) {
+            for (int j = 0; j < tab[i].length; j++) {
+                tab[i][j] = (int) (Math.random() * 10);
+                System.out.print(tab[i][j] + " ");
             }
             System.out.println();
         }
 
         System.out.println("przekatna \\");
 
-        int g = 0;
-        for (int i = 0; i < len1; i++) {
-            for (int a = i + 1; a < len1; a++) {
-                if (tab4[i][i] == tab4[a][a]) {
-                    System.out.println("tab[" + i + "][" + i + "]= " + tab4[i][i] + " tab[" + a + "][" + a + "]= " + tab4[a][a]);
-                    g++;
-                    break;
+        int sameValuesExist = 0;
+        for (int i = 0; i < tableLength; i++) {
+            for (int a = i + 1; a < tableLength; a++) {
+                if (tab[i][i] == tab[a][a]) {
+                    System.out.println("tab[" + i + "][" + i + "]= " + tab[i][i] + " tab[" + a + "][" + a + "]= " + tab[a][a]);
+                    sameValuesExist++;
                 }
             }
         }
-        if (g == 0) {
+        if (sameValuesExist == 0) {
             System.out.println("brak takich samych wartości w przekatnej \\");
         }
 
         System.out.println();
         System.out.println("przekatna /");
 
-        int v = 0;
-        int dlugosc = len1 - 1;
-        for (int i = 0; i < len1; i++) {
-            for (int j = dlugosc; j >= 0; j--) {
-                if (i + j == dlugosc) {
-                    for (int a = i + 1; a < len1; a++) {
-                        for (int b = j - 1; b >= 0; b--) {
-                            if (a + b == dlugosc && tab4[i][j] == tab4[a][b]) {
-                                System.out.println("tab[" + i + "][" + j + "]= " + tab4[i][j] + " tab[" + a + "][" + b + "]= " + tab4[a][b]);
-                                v++;
-                                break;
-                            }
-                        }
-                    }
+        if (sameValuesExist != 0) {
+            sameValuesExist = 0;
+        }
+
+        int lastElementIndex = tableLength - 1;
+
+        for (int i = 0; i < tableLength; i++) {
+            for (int a = i + 1; a < tableLength; a++) {
+                int j = lastElementIndex - i;
+                int b = lastElementIndex - a;
+                if (tab[i][j] == tab[a][b]) {
+                    System.out.println("tab[" + i + "][" + (j) + "]= " + tab[i][j] + " tab[" + a + "][" + b + "]= " + tab[a][b]);
+                    sameValuesExist++;
                 }
             }
         }
 
-
-        if (v == 0) {
+        if (sameValuesExist == 0) {
             System.out.println("brak takich samych wartości w przekatnej /");
         }
     }
