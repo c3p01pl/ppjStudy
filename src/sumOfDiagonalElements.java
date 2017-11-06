@@ -1,9 +1,11 @@
 public class CheckDiagonals {
     public static void main(String[] args) {
         //9
-        int tab[][] = new int[7][7];
+        int tab[][] = new int[4][4];
         int tableLength = tab.length;
-
+        if (tableLength != tab[1].length){
+            System.out.println("Macie");
+        }
         for (int i = 0; i < tab.length; i++) {
             for (int j = 0; j < tab[i].length; j++) {
                 tab[i][j] = (int) (Math.random() * 10);
