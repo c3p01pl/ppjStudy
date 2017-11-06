@@ -11,7 +11,7 @@ public class CheckDiagonals {
             System.out.println();
         }
 
-        System.out.println("kolumna \\");
+        System.out.println("przekatna \\");
 
         int g = 0;
         for (int i = 0; i < len1; i++) {
@@ -24,11 +24,11 @@ public class CheckDiagonals {
             }
         }
         if (g == 0) {
-            System.out.println("brak takich samych wartości w kolumnie \\");
+            System.out.println("brak takich samych wartości w przekatnej \\");
         }
 
         System.out.println();
-        System.out.println("kolumna /");
+        System.out.println("przekatna /");
 
         int v = 0;
         int dlugosc = len1 - 1;
@@ -50,7 +50,7 @@ public class CheckDiagonals {
 
 
         if (v == 0) {
-            System.out.println("brak takich samych wartości w kolumnie /");
+            System.out.println("brak takich samych wartości w przekatnej /");
         }
     }
 }
