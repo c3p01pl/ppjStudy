@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class sumOfDiagonalElements {
     public static void main(String[] args) {
         //9
-        int rows = inputNumber("wierszy");
-        int columns = inputNumber("kolumn");
+        int rows = inputNumber("Podaj liczbe wierszy: ");
+        int columns = inputNumber("Podaj liczbe kolumn: ");
         int tab[][] = new int[rows][columns];
         if (rows <= 1 || columns <= 1 || rows != columns) {
             System.out.println("Wykonanie operacji niemożliwe. Macierz nie posiada przekątnej głownej. Liczba wierszy(" + rows + ") rózna od liczby kolumn(" + columns + ").");
@@ -61,7 +61,7 @@ public class sumOfDiagonalElements {
     public static int inputNumber(String text) {
 
         Scanner in = new Scanner(System.in);
-        System.out.print("Podaj liczbe " + text + ": ");
+        System.out.print(text);
         int number = in.nextInt();
         return number;
     }
