@@ -27,7 +27,7 @@ public class checkIfAnySumRowEqualsAnySumColumn extends sumOfDiagonalElements {
         System.out.println();
 
         for (int g = 0; g < rowsSum.length; g++) {
-            System.out.println("Suma wiesza " + g + " = " + rowsSum[g]);
+            System.out.println("Suma wiersza " + g + " = " + rowsSum[g]);
         }
         System.out.println();
         for (int k = 0; k < columnsSum.length; k++) {
