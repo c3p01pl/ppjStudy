@@ -6,19 +6,18 @@ public class exerciseSevenFive {
 
         int matrixSize = inputNumber("Podaj liczbe N: ");
         int tab[][] = new int[matrixSize][matrixSize];
-        int tempSize = matrixSize;
 
-        for (int a = 0; a < tempSize; a++) {
-            for (int i = a; i < tempSize; i++) {
-                for (int j = a; j < tempSize; j++) {
+        for (int a = 0; a < matrixSize; a++) {
+            for (int i = a; i < matrixSize; i++) {
+                for (int j = a; j < matrixSize; j++) {
                     tab[i][j] = a;
                 }
             }
-            tempSize = tempSize - 1;
+            matrixSize--;
         }
 
-        for (int i = 0; i < matrixSize; i++) {
-            for (int j = 0; j < matrixSize; j++) {
+        for (int i = 0; i < tab.length; i++) {
+            for (int j = 0; j < tab.length; j++) {
                 System.out.print(tab[i][j] + " ");
             }
             System.out.println();
