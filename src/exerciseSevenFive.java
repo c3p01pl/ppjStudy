@@ -1,10 +1,8 @@
-import java.util.Scanner;
-
 public class exerciseSevenFive {
 
     public static void main(String[] args) {
 
-        int matrixSize = inputNumber("Podaj liczbe N: ");
+        int matrixSize = commonMethods.inputNumber("Podaj liczbe N: ");
         int tab[][] = new int[matrixSize][matrixSize];
 
         for (int a = 0; a < matrixSize; a++) {
@@ -24,13 +22,5 @@ public class exerciseSevenFive {
         }
 
 
-    }
-
-    public static int inputNumber(String text) {
-
-        Scanner in = new Scanner(System.in);
-        System.out.print(text);
-        int number = in.nextInt();
-        return number;
     }
 }
