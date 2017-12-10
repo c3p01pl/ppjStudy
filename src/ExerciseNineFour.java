@@ -10,7 +10,7 @@ public class ExerciseNineFour {
         }
 
         for (int i = 0; i < array.length; i++) {
-            leastCommonMultiple(array[i][0], array[0][1]);
+            leastCommonMultiple(array[i][0], array[i][1]);
         }
         System.out.println();
 
